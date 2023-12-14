@@ -1,0 +1,77 @@
+{% extends 'masterpage.html' %}
+{% load static %}
+{% block content %}
+
+<header>
+    <h2 class="logo">ProComputers</h2>
+    <input type="checkbox" id="check" hidden="true">
+    <label for="check" class="mostrar">
+    </label>
+    <nav class="menu">
+        <a href="/">ProComputers </a>
+        <a href="/empleados/">Empleados </a>
+        <a href="/servicios/">Servicios </a>
+        <label for="check" class="esconder">
+        </label>
+    </nav>
+    </header>
+
+
+    <!-- Creo un formulario de contacto con campos para el nombre, correo electrónico y comentarios, junto con un botón para enviar los datos.
+    Muestro mensajes de error si los campos requeridos no se completan y mensaje de confirmación después del envío del formulario.  -->
+    <main>
+        <!-- Uso el servicio de Formsubmit para enviar por email el formulardio completo
+            Encripto el destinatario del mail por razones de seguridad -->        
+        <form id="miFormulario" onsubmit="return validarFormulario()"
+            action="https://formsubmit.co/9cceac3b779b74dadc051ee218ad8e13" method="POST">
+            <div class="contenedor">
+                <!-- Título del formulario -->
+                <h1 style="font-family: sans-serif;font-size: 24px; font-weight: bold;">Formulario de contacto
+                    <br>
+                    <h3>Realizá tu consulta y nos contacteremos con vos para darte el asesoramiento que necesitas. <br> <br></h3></h1>
+
+                <!-- Campo Nombre -->
+                <div class="campo">
+                    <label for="nombre" class="etiquetaFcontacto">Nombre: <span class="required">*</span></label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <span class="error-message" id="nombre-error"></span><br><br>
+                </div>
+
+                 <!-- Campo Correo Electrónico -->
+                <div class="campo">
+                    <label for="email" class="etiquetaFcontacto">Correo Electrónico: <span
+                            class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span><br><br>
+                </div>
+
+                 <!-- Campo Comentarios -->
+                <div class="campo">
+                    <label for="comentarios" class="etiquetaFcontacto">Comentarios: <span
+                            class="required">*</span></label>
+                    <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
+                    <span class="error-message" id="comentarios-error"></span><br><br>
+                </div>
+
+                <!-- Botón de envío -->
+                <div class="botones">
+                    <button type="submit" value="Enviar">Enviar</button>
+                </div>
+                <p></p>
+                <p>
+                     <!-- Mensaje de confirmación de envío -->
+                    <span id="enviado-ok"></span><br><br>
+                </p>
+            </div>
+            <!--
+                Campos ocultos:
+                El servicio utiliza un "Captcha" y una pagina para volver a la pagina de origen. Oculto ambos.
+            -->
+            <!-- Puedo decomentar la siguiente linea, cuando este subida a algun sitio la pagina y sepa la pagina de retorno despues de enviar el formulario -->
+            <!-- <input type="hidden" name="_next" value="http://localhost:5500"> -->
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+
+    </main>
+
+{% endblock %}

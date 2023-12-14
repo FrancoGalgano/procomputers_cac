@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/ v5.8.2/css/all.css" integrity="sha384-053vJWv+UjzBfQzYUhtDYW+Pj2yciDJxpsK10YPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9fb41bb252.js" crossorigin="anonymous"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static './css/styles.css' %}">
+    <link rel="icon" href="{% static './img/logo1.png' %}">
+    
+    <title>{{title}}</title>
+</head>
+<body>
+
+
+{%block content %}
+
+{%endblock%}
+    
+
+    <footer>
+
+        <section id="iconos">
+            <h4> VEA NUESTRAS REDES SOCIALES</h4>
+            <br>
+            <h6>  </h6>
+            <div class="contenido-iconos">
+                <div>
+                    <a class="fa fa-instagram" target="_blank" href="https://www.instagram.com/programacodoacodo/"></a>
+                </div>
+                <div>
+                    <a class="fa fa-facebook" target="_blank" href="https://www.facebook.com/AgenciaCTI.Jujuy/videos/codo-a-codo-40te-invitamos-a-inscribirte-en-los-cursos-que-te-entrenan-en-las-ar/325260899327363/"></a>
+                </div>
+                <div>
+                    <a class="fa fa-twitter" target="_blank" href="https://twitter.com/disfrutemosba/status/1410976561809870855"></a>
+                </div>
+                <div>
+                    <a class="fa fa-youtube" target="_blank" href="https://www.youtube.com/channel/UCzelX_Pd_RkibwOMrYudIrQ"></a>
+                </div>
+            </div>
+        </section>
+        
+    </footer>
+
+
+</body>
+</html>
+

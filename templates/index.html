@@ -1,0 +1,73 @@
+{% extends 'masterpage.html' %}
+{% load static %}
+{% block content %}
+
+<header>
+    <h2 class="logo">ProComputers</h2>
+    <input type="checkbox" id="check" hidden="true">
+    <label for="check" class="mostrar">
+    </label>
+    <nav class="menu">
+        <a href="/empleados/">Empleados </a>
+        <a href="/contacts/">Contacto </a>
+        <a href="/servicios/">Servicios </a>
+        <label for="check" class="esconder">
+        </label>
+    </nav>
+    </header>
+
+<main>
+    <section id="banner">
+        <div class="contenido-banner">
+            <h3>
+                <span>ProComputers: Todo lo que tu pc necesita, en un solo lugar. <br> </span>
+                <br>
+                    Somos cuatro apasionados por la tecnología listos para asesorarte y potenciar tu Compu al máximo!  <br>
+                    <br>
+                    Aquí vas a encontrar todos los componentes y accesorios que estás buscando. <br>
+                    <br>
+                    También vas a poder encontrar soluciones tecnológicas a las necesidades de tu empresa.<br>
+                    <br>
+                <span>Somos la innovación, somos ProComputers</span>
+            </h3>
+        </div>
+    </section>
+
+
+    <section id="nosotros">
+        <div>
+            <img src="{% static './img/Franco.png' %}" alt="">
+            <h4>PERSONA 1</h4>
+            <P>Especialista en computación y<br> soluciones informáticas</P>
+            <a href="https://ar.linkedin.com/" class="Ver-perfil" target="_blank"> Ver Perfil </a>
+        </div>
+
+
+        <div>
+            <img src="{% static './img/Gustavo.png' %}" alt="">
+            <h4>PERSONA 2</h4>
+            <P>Ingeniero<br>electrónico</P>
+            <a href="https://ar.linkedin.com/" class="Ver-perfil" target="_blank"> Ver Perfil </a>
+        </div>
+
+
+        <div>
+            <img src="{% static './img/Seba.png' %}" alt="">
+            <h4>PERSONA 3</h4>
+            <P>Técnico en redes<br> y especialista en sofware</P>
+            <a href="https://ar.linkedin.com/" class="Ver-perfil" target="_blank"> Ver Perfil </a>
+        </div>
+
+
+        <div>
+            <img src="{% static './img/hector.png' %}" alt="">
+            <h4>PERSONA 4</h4>
+            <P>Técnico en<br>computación</P>
+            <a href="https://ar.linkedin.com/" class="Ver-perfil" target="_blank"> Ver Perfil </a>
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}
